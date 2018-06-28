@@ -50,7 +50,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
 
 ### TouchPad ###
-bindsym XF86TouchpadToggle exec /home/n0rse/Templates/toggletouchpad.sh # toggle touchpad
+bindsym XF86TouchpadToggle exec /home/n0rse/Templates/toggletouchpad # toggle touchpad
 ### Other ###
 bindsym Print exec scrot -q 100
 
