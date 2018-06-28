@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# script to control the brightness of a Lenovo Yoga 720
+
+change=$1
+
+echo $change
+
+max_brightness=$(cat /sys/class/backlight/intel_backlight/max_brightness)
+
+echo $max_brightness
+
+brightness=$(cat /sys/class/backlight/intel_backlight/brightness)
+echo $brightness
+
+new_value=$(($brightness + $change))
+echo $new_value
+
+if (( $new_value < 10 )); then  
+        let brightness=10
+
+elif  (($new_value > $max_brightness)); then
+        let brightness=$max_brightness
+else
+        let brightness=$new_value
+fi
+
+echo $brightness > /sys/class/backlight/intel_backlight/brightness
