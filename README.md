@@ -1,4 +1,4 @@
 ### Dotfiles
 
-Contains all configuration files needed to set up our i3 DE the way in
-the desired manner.
+Contains all configuration files needed to set up the i3 environment
+in the desired manner
